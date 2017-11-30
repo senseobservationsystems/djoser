@@ -69,6 +69,7 @@ default_settings = {
     'USER_EMAIL_FIELD_NAME': 'email',
     'SOCIAL_AUTH_TOKEN_STRATEGY': 'djoser.social.token.jwt.TokenStrategy',
     'SOCIAL_AUTH_ALLOWED_REDIRECT_URIS': [],
+    'ENABLE_LOGGING': False,
 }
 
 SETTINGS_TO_IMPORT = ['TOKEN_MODEL', 'SOCIAL_AUTH_TOKEN_STRATEGY']

@@ -1,10 +1,13 @@
 from django.conf.urls import url
+from djoser.conf import settings
 from django.contrib.auth import get_user_model
 
-from djoser import views
+from djoser import logging, views
 
 User = get_user_model()
 
+if settings.ENABLE_LOGGING :
+    logging.add_logging_mixin(views)
 
 urlpatterns = [
     url(r'^me/$', views.UserView.as_view(), name='user'),
