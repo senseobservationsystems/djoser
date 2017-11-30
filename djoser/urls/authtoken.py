@@ -1,10 +1,7 @@
 from django.conf.urls import url
 from djoser.conf import settings
 
-from djoser import logging, views
-
-if settings.ENABLE_LOGGING :
-    logging.add_logging_mixin(views)
+from djoser import views
 
 urlpatterns = [
     url(

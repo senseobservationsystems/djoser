@@ -32,6 +32,7 @@ INSTALLED_APPS = (
     'templated_mail',
     'rest_framework',
     'rest_framework.authtoken',
+    'rest_framework_tracking',
     'djoser',
     'social_django',
 
@@ -77,7 +78,8 @@ DJOSER = {
     'SEND_ACTIVATION_EMAIL': False,
     'PASSWORD_RESET_CONFIRM_URL': '#/password/reset/confirm/{uid}/{token}',
     'ACTIVATION_URL': '#/activate/{uid}/{token}',
-    'SOCIAL_AUTH_ALLOWED_REDIRECT_URIS': ['http://localhost/']
+    'SOCIAL_AUTH_ALLOWED_REDIRECT_URIS': ['http://localhost/'],
+    'ENABLE_LOGGING': True,
 }
 
 JWT_AUTH = {

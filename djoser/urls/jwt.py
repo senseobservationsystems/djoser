@@ -1,12 +1,12 @@
 from django.conf.urls import url
-from djoser.conf import settings
 
 from rest_framework_jwt import views
 
+from djoser.conf import settings
 from djoser import logging
 
 if settings.ENABLE_LOGGING :
-    logging.add_logging_mixin(views)
+    logging.mixin(views.JSONWebTokenAPIView)
 
 urlpatterns = [
     url(r'^jwt/create/', views.obtain_jwt_token, name='jwt-create'),
